@@ -7,4 +7,4 @@ install:
 
 script:
 script:
- - python -i unittest TestTriangles
+ - python -i unittest TestTriangles.py
