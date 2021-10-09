@@ -1,4 +1,4 @@
-def classify_triangle(a_tri, b_tri, c_tri):
+def classify_tri(a_tri, b_tri, c_tri):
     """
     Your correct code goes here...  Fix the faulty logic below until the code passes all of
     you test cases.
