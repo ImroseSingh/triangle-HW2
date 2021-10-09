@@ -13,7 +13,7 @@ def classifytriangle(a, b, c):
         If not a valid triangle, then return 'NotATriangle'
         If the sum of any two sides equals the squate of the third side, then return 'Right'
       BEWARE: there may be a bug or two in this code
-    """
+"""
     
     
     
