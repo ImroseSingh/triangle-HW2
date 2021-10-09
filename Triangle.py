@@ -1,5 +1,7 @@
-def classify_triangle(a_tri, b_tri, c_tri):
-    """
+def classifytriangle(a, b, c):
+  
+
+"""
     Your correct code goes here...  Fix the faulty logic below until the code passes all of
     you test cases.
     This function returns a string with the type of triangle from three integer values
@@ -12,28 +14,32 @@ def classify_triangle(a_tri, b_tri, c_tri):
         If the sum of any two sides equals the squate of the third side, then return 'Right'
       BEWARE: there may be a bug or two in this code
     """
-# require that the input values be >= 0 and <= 200
-    if a_tri > 200 or b_tri > 200 or c_tri > 200:
+    
+    
+    
+  # require that the input values be >= 0 and <= 200
+    if a > 200 or b > 200 or c > 200:
         print('InvalidInput')
-    if a_tri <= 0 or b_tri <= 0 or c_tri <= 0:
+    if a <= 0 or b <= 0 or c <= 0:
         print('InvalidInput')
- # verify that all 3 inputs are integers
-# Python's "isinstance(object,type) returns True if the object is of the specified type
-    if not(isinstance(a_tri, int) and isinstance(b_tri, int) and isinstance(c_tri, int)):
+    # verify that all 3 inputs are integers
+   # Python's "isinstance(object,type) returns True if the object is of the specified type
+    if not(isinstance(a , int) and isinstance(b , int) and isinstance(c, int)):
         print('InvalidInput')
-# This information was not in the requirements spec but
+
+     # This information was not in the requirements spec but
     # is important for correctness
     # the sum of any two sides must be strictly less than the third side
     # of the specified shape is not a triangle
-    if (a_tri >= (b_tri + c_tri)) or (b_tri >= (a_tri + c_tri)) or (c_tri >= (a_tri + b_tri)):
+   if (a >= (b + c)) or (b >= (a + c)) or (c >= (a + b)):
         return 'NotATriangle'
 # now we know that we have a valid triangle
-    if a_tri == b_tri and b_tri == c_tri and a_tri == c_tri:
+    if a == b and b_tri == c_tri and a == c:
         return 'Equilateral'
-    elif a_tri ** 2 + b_tri ** 2 == c_tri ** 2 or\
-            c_tri ** 2 + b_tri ** 2 == a_tri ** 2 or a_tri ** 2 + c_tri ** 2 == b_tri ** 2:
+    elif a** 2 + b ** 2 == c** 2 or\
+            c ** 2 + b_tri ** 2 == a ** 2 or a ** 2 + c ** 2 == b ** 2:
         return 'Right'
-    elif (a_tri != b_tri) and  (b_tri != c_tri) and (a_tri != c_tri):
+    elif (a != b) and  (b != c) and (a != c):
         return 'Scalene'
     else:
         return 'Isoceles'
